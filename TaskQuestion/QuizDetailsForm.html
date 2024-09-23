@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <center>
+
+        <table border="1" style="background-color: rgb(180, 216, 216);">
+            <h2><u>Quiz Details Form</u></h2>
+            <tr>
+
+                <th>FirstName</th>
+                <td><input type="text" id="firstName" "></td>
+                </tr>
+                <tr>
+
+                    <th>Last Name</th>
+                    <td><input type=" text" id="lastName"></td>
+            </tr>
+            <tr>
+
+                <th></th>
+                <td><input type="submit" onclick="getData()">
+                </td>
+                </td>
+            </tr>
+
+
+        </table>
+        <br><br><br>
+
+
+        <script>
+            function getData() {
+                const firstName = document.getElementById("firstName").value;
+                const lastName = document.getElementById("lastName").value;
+                console.warn(firstName + " " + lastName);
+
+                localStorage.setItem("firstName", firstName);
+                localStorage.setItem("lastName", lastName);
+                window.location.href = 'QuestionAnswer.html';
+
+                // document.getElementById("firstName").style.display = "none";
+                // document.getElementById("lastName").style.display = "none";
+
+            }
+   
+        </script>
+
+    </center>
+
+</body>
+
+</html>
